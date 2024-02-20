@@ -1,8 +1,8 @@
 ![TreeSchool](assets/treeschool_header.png)
 
-# Corso-Java-Developer-2023-03
+# Corso-Java-Developer-2024-01
 
-This repo collects all the exercises produced and gathered by [Marco Adriani](https://github.com/MrSosu), [Andrea Gasparini](https://github.com/andrea-gasparini) and [Davide Fella](https://github.com/davidefella) for the teaching of the 2023 Java Back-end Developer course offered by [TreeSchool](https://tree.it/school/).
+This repo collects all the exercises produced and gathered by [Marco Adriani](https://github.com/MrSosu), [Andrea Gasparini](https://github.com/andrea-gasparini) and [Davide Fella](https://github.com/davidefella) for the teaching of the 2024 Java Back-end Developer course offered by [TreeSchool](https://tree.it/school/).
 
 
 <!--
