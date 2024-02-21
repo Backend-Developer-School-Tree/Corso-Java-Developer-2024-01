@@ -2,17 +2,17 @@
 
 # Corso-Java-Developer-2024-01
 
-This repo collects all the exercises produced and gathered by [Andrea Gasparini](https://github.com/andrea-gasparini), Luca di Pietro Martinelli, Verga Gabriella and [Davide Fella](https://github.com/davidefella) for the teaching of the 2024 Java Back-end Developer course offered by [TreeSchool](https://tree.it/school/).
+This repo collects all the exercises produced and gathered by [Andrea Gasparini](https://github.com/andrea-gasparini), [Luca Di Pietro Martinelli](https://github.com/LucaDPM), Gabriella Verga and [Davide Fella](https://github.com/davidefella) for the teaching of the 2024 Java Back-end Developer course offered by [TreeSchool](https://tree.it/school/).
 
 
-<!--
 # Index
 
-| Module | Subject                      | Contents                                                                                                                                                                                                                                                                                                      |
-|--------|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1      | Java syntax and naming       |                                                                                                                                                                                                                                                                                                               |
-| 2      | ABC dell'informatica in Java | [Esempi ricorsione](module_02/src/esempi/Ricorsione.java), [Esercizi](module_02/src/esercizi/)                                                                                                                                                                                                                |
-| 3      | Git                          |                                                                                                                                                                                                                                                                                                               |
+| Module | Subject                      | Contents                                                                            |
+|--------|------------------------------|-------------------------------------------------------------------------------------|
+| 1      | Introduzione a Java          | [Esempi](module_01/src/esempi/), [Esercizi](module_01/src/esercizi/)                |
+| 2      | ABC dell'informatica in Java | [Esempi](module_02/src/esempi/), [Esercizi](module_02/src/esercizi/) |
+| 3      | Git                          |                                                                                     |
+<!--
 | 4      | Object-Oriented Programming  | [Esempi](module_04/src/esempi/), [Esercizi](module_04/src/esercizi/)                                                                                                                                                                                                                                          |
 | 5      | Ereditarietà Base            | [Esempi](module_05/src/esempi/), [Esercizi](module_05/src/esercizi/)                                                                                                                                                                                                                                          |
 | 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src/esercizi/), [Approfondimento Comparable/Comparator](module_06/src/esempi/comparator/Classifica.java?plain=1#L107-L138), [Esempio Iterable/Iterator](module_06/src/esempi/lista_di_interi/ListaDiInteri.java?plain=1#L144-L178), [Esempi ArrayList](module_06/src/esempi/EsempiListe) |
