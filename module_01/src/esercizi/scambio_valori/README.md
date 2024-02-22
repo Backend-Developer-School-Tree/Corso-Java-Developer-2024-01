@@ -1,4 +1,4 @@
-## Scambio di Valori 🛴
+# Scambio di Valori 🛴
 
 Scrivere un programma Java che acquisisca da tastiera due valori interi e li memorizzi nelle variabili _varA_ e _varB_.
 

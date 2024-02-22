@@ -1,4 +1,4 @@
-## Area e Perimetro 🛴
+# Area e Perimetro 🛴
 
 Scrivere un programma Java che acquisisca da tastiera i seguenti dati:
 

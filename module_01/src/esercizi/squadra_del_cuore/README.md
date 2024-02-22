@@ -1,4 +1,4 @@
-## Squadra del Cuore 🛴
+# Squadra del Cuore 🛴
 
 Scrivere un programma Java che permetta all’utente di inserire da tastiera i seguenti dati:
 

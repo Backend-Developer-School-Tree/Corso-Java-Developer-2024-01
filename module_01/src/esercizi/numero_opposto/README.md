@@ -1,4 +1,4 @@
-## Numero Opposto 🛴
+# Numero Opposto 🛴
 
 Scrivere un programma Java in grado di prendere in ingresso da tastiera un intero _x_ e stampare a video il valore _–x_.
 

@@ -1,4 +1,4 @@
-## Dati Anagrafici 🛴
+# Dati Anagrafici 🛴
 
 Scrivere un programma Java che permetta all’utente di inserire da tastiera il proprio nome e cognome.
 

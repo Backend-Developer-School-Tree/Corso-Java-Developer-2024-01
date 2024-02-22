@@ -1,4 +1,4 @@
-## Inverti Stringhe 🛵
+# Inverti Stringhe 🛵
 
 Scrivere un programma Java che, data una stringa, stampi la stessa stringa invertendone il contenuto a partire dal primo spazio, ad esempio data la stringa _"come stai"_ stampi a video _"stai come"_.
 

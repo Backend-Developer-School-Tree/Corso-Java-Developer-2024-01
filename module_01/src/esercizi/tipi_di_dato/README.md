@@ -1,4 +1,4 @@
-## Tipi di Dato 🛴
+# Tipi di Dato 🛴
 
 Scrivere un programma Java che:
 
