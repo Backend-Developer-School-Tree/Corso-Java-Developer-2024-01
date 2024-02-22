@@ -2,7 +2,7 @@
 
 # Corso-Java-Developer-2024-01
 
-This repo collects all the exercises produced and gathered by [Andrea Gasparini](https://github.com/andrea-gasparini), [Luca Di Pietro Martinelli](https://github.com/LucaDPM), Gabriella Verga and [Davide Fella](https://github.com/davidefella) for the teaching of the 2024 Java Back-end Developer course offered by [TreeSchool](https://tree.it/school/).
+This repo collects all the exercises produced and gathered by [Andrea Gasparini](https://github.com/andrea-gasparini), [Luca Di Pietro Martinelli](https://github.com/LucaDPM), [Gabriella Verga](https://github.com/gabriellaverga)  and [Davide Fella](https://github.com/davidefella) for the teaching of the 2024 Java Back-end Developer course offered by [TreeSchool](https://tree.it/school/).
 
 
 # Index
