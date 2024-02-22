@@ -25,12 +25,18 @@ public class Anagrams {
         if (a.length() != b.length()) {
             return false;
         }
-        int lettersFound = 0;
+
+        int currentLetterIndex;
         for (int i = 0; i < a.length(); i++) {
-            if (b.indexOf(a.charAt(i)) != -1) {
-                lettersFound++;
+            currentLetterIndex = b.indexOf((a.charAt(i)));
+            if (currentLetterIndex == 0) {
+                b = b.substring(1);
+            } else if (currentLetterIndex > 0 && currentLetterIndex < b.length() - 1) {
+                b = b.substring(0, currentLetterIndex) + b.substring(currentLetterIndex + 1, b.length());
+            } else if (currentLetterIndex == b.length() - 1) {
+                b = b.substring(0, b.length() - 1);
             }
         }
-        return lettersFound == a.length();
+        return b.length() == 0;
     }
 }
