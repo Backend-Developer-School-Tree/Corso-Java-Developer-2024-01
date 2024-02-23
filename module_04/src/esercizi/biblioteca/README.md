@@ -5,7 +5,7 @@ di indici (interi) dei libri che contiene. La Biblioteca viene costruita a parti
 indici di libri.
 In particolare, implementare i seguenti metodi:
 - `esisteLibro`: prende un indice e restituisce true se esiste il libro con questo indice, false altrimenti
-- `getIndiciLibriOrdinati`: ritorna la lista degli indici di libri presenti nella biblioteca, in ordine ascendente
+- `getIndiciLibriOrdinati`: ritorna la lista degli indici di libri presenti nella biblioteca, in ordine ascendente.
 
 Potete utilizzare il seguente codice come test:
 
