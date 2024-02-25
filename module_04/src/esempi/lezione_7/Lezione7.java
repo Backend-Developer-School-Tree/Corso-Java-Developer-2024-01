@@ -1,6 +1,4 @@
-package esempi;
-
-import java.util.Scanner;
+package esempi.lezione_7;
 
 public class Lezione7 {
     public static void main(String[] args) {

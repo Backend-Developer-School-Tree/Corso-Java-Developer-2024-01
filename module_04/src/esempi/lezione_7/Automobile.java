@@ -1,4 +1,4 @@
-package esempi;
+package esempi.lezione_7;
 
 public class Automobile {
     // Attributi
