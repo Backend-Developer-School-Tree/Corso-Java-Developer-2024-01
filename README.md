@@ -7,14 +7,14 @@ This repo collects all the exercises produced and gathered by [Andrea Gasparini]
 
 # Index
 
-| Module | Subject                      | Contents                                                                 |
-|--------|------------------------------|--------------------------------------------------------------------------|
-| 1      | Introduzione a Java          | [Esempi](module_01/src/esempi/), [Esercizi](module_01/src/esercizi/)     |
-| 2      | ABC dell'informatica in Java | [Esempi](module_02/src/esempi/), [Esercizi](module_02/src/esercizi/)     |
-| 3      | Git                          |                                                                          |
-| 4      | Object-Oriented Programming  | [Esempi](module_04/src/esempi/), [Esercizi](module_04/src/esercizi/)     |
-| 5      | Ereditarietà Base            | [Esempi](module_05/src/esempi/), [Esercizi](module_05/src/esercizi/)     |
-| 6      | Ereditarietà Avanzata        | [Esercizi](module_06/src/esercizi/), [Esercizi](module_06/src/esercizi/) |
+| Module | Subject                      | Contents                                                             |
+|--------|------------------------------|----------------------------------------------------------------------|
+| 1      | Introduzione a Java          | [Esempi](module_01/src/esempi/), [Esercizi](module_01/src/esercizi/) |
+| 2      | ABC dell'informatica in Java | [Esempi](module_02/src/esempi/), [Esercizi](module_02/src/esercizi/) |
+| 3      | Git                          |                                                                      |
+| 4      | Object-Oriented Programming  | [Esempi](module_04/src/esempi/), [Esercizi](module_04/src/esercizi/) |
+| 5      | Ereditarietà Base            | [Esempi](module_05/src/esempi/), [Esercizi](module_05/src/esercizi/) |
+| 6      | Ereditarietà Avanzata        | [Esempi](module_06/src/esempi/), [Esercizi](module_06/src/esercizi/) |
 <!--
 | 7      | Generics & Collections       | [Esempi](module_07/src/esempi/), [Esercizi](module_07/src/esercizi/)                                                                                                                                                                                                                                          |
 | 8      | Eccezioni e annotazioni      | [Esempi](module_08/src/esempi/), [Esercizio SharedMobility](module_08/src/esercizi/shared_mobility)                                                                                                                                                                                                           |
