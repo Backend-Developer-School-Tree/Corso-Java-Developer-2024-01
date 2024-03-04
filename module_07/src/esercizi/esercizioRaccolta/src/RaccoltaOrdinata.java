@@ -1,3 +1,5 @@
+package esercizi.esercizioRaccolta.src;
+
 import java.util.TreeSet;
 
 public class RaccoltaOrdinata extends AbstractRaccolta{

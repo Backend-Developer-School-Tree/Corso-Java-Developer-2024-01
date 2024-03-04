@@ -1,3 +1,5 @@
+package esercizi.esercizioRaccolta.src;
+
 import java.util.Set;
 
 //creo la classe astratta perché sono sicuro che lavoreranno sulla stessa interfaccia di Set quindi utilizzo la

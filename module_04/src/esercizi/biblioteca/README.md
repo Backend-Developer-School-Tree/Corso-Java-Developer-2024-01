@@ -10,7 +10,7 @@ In particolare, implementare i seguenti metodi:
 Potete utilizzare il seguente codice come test:
 
 ```java
-public class Main {
+public class MainEs2 {
     public static void main(String[] args) {
         int[] values = new int[7];
         values[0] = 123;

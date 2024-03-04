@@ -1,3 +1,5 @@
+package esercizi.esercizioRaccolta.src;
+
 public class Main {
     /**
      * Si definisca una classe Canzone i cui oggetti sono costruiti con nome e autore della canzone.

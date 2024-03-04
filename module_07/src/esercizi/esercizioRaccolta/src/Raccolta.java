@@ -1,3 +1,5 @@
+package esercizi.esercizioRaccolta.src;
+
 import java.util.HashSet;
 
 public class Raccolta extends AbstractRaccolta{
