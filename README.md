@@ -15,7 +15,7 @@ This repo collects all the exercises produced and gathered by [Andrea Gasparini]
 | 4      | Object-Oriented Programming  | [Esempi](module_04/src/esempi/), [Esercizi](module_04/src/esercizi/) |
 | 5      | Ereditarietà Base            | [Esempi](module_05/src/esempi/), [Esercizi](module_05/src/esercizi/) |
 | 6      | Ereditarietà Avanzata        | [Esempi](module_06/src/esempi/), [Esercizi](module_06/src/esercizi/) |
-| 7      | Generics & Collections       | [Esempi](module_07_tmp/src/esempi/), [Esercizi](module_07_tmp/src/esercizi/) |                                                                                                                                                                                                                                         |
+| 7      | Generics & Collections       | [Esempi](module_07/src/esempi/), [Esercizi](module_07/src/esercizi/) |                                                                                                                                                                                                                                         |
 
 <!--
 | 8      | Eccezioni e annotazioni      | [Esempi](module_08/src/esempi/), [Esercizio SharedMobility](module_08/src/esercizi/shared_mobility)                                                                                                                                                                                                           |
