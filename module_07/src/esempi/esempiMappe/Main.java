@@ -75,7 +75,8 @@ public class Main
         Map<Word, String> map = new HashMap<>();
         Map<Word, String> map2 = new TreeMap<>();
         Map<Word, String> map3 = new LinkedHashMap<>();
-        
+
+        Comparator<Word> cmp2 = new WordComparator();
         Comparator<Word> cmp = new Comparator<Word>() {
             @Override
             public int compare(Word o1, Word o2) {
