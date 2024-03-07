@@ -1,8 +1,8 @@
-package esercizi.distributore_bevande;
+package esercizi.distributore_bevande_map;
 
-import esercizi.distributore_bevande.model.Caffe;
-import esercizi.distributore_bevande.model.Cappuccino;
-import esercizi.distributore_bevande.model.Prodotto;
+import esercizi.distributore_bevande_map.model.Caffe;
+import esercizi.distributore_bevande_map.model.Cappuccino;
+import esercizi.distributore_bevande_map.model.Prodotto;
 
 public class Main {
 
