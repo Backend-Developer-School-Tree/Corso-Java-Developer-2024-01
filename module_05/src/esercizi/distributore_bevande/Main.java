@@ -5,10 +5,7 @@ import esercizi.distributore_bevande.model.Cappuccino;
 import esercizi.distributore_bevande.model.Prodotto;
 
 public class Main {
-
-    /*
-    *
-    * */
+    
     public static void main(String[] args){
 
         DistributoreBevande distributoreBevande = new DistributoreBevande(10);
