@@ -11,10 +11,14 @@ public class Main
         Map<Integer, String> integerStringMap2 = new TreeMap<>();
         Map<Integer, String> integerStringMap3 = new LinkedHashMap<>();
 
+        Map<Integer, Map<String, Integer>> maps;
+
         // HashMap
         integerStringMap.put(15, "quindici");
         integerStringMap.put(25, "venticinque");
         integerStringMap.put(3, "tre");
+        integerStringMap.put(3, "tre un'altra volta"); //sovrascrivo il vecchio valore
+
 
         // TreeMap
         integerStringMap2.put(15, "quindici");
@@ -38,6 +42,7 @@ public class Main
 
         // le chiavi sono un Set di valori
         System.out.println(integerStringMap.keySet()); // HashMap --> HashSet
+
         // i valori sono una Collection (lista)
         System.out.println(integerStringMap.values());
 
@@ -51,6 +56,13 @@ public class Main
         {
             System.out.println(value);
         }
+
+        /* Se avessi avuto non <Integer, String> ma <Integer, List<String>
+        *  for (List<String> stringValues : integerStringMap.values()){
+        *   for( String s : stringValues)
+        *       System.out.println(s);
+        *  }
+        * */
 
         // for sulle coppie (chiave, valore)
         for (Map.Entry<Integer, String> entry : integerStringMap.entrySet())
@@ -66,7 +78,6 @@ public class Main
 
 
         // Esempio con utilizzo di una classe da noi definita come chiave
-
         Set<Word> set = new HashSet<>();
         set.add(new Word(1, "ciao"));
         set.add(new Word(2, "ciao"));
@@ -76,7 +87,7 @@ public class Main
         Map<Word, String> map2 = new TreeMap<>();
         Map<Word, String> map3 = new LinkedHashMap<>();
         
-        Comparator<Word> cmp = new Comparator<Word>() {
+        Comparator<Word> cmp = new Comparator<>() {
             @Override
             public int compare(Word o1, Word o2) {
                 return o1.word.compareTo(o2.word);
