@@ -10,5 +10,6 @@ Devono essere possibili le seguenti operazioni:
 - inserire un utente e i suoi interessi
 - cancellare un utente (e i suoi interessi associati)
 - dato un utente u1, ottenere l'utente u2 con più interessi in comune con u1
+
 - PLUS 🏍:ottenere gli utenti più simili (ossia con più interessi in comune) 
 
