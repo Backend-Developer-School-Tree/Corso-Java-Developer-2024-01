@@ -1,6 +1,8 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import model.Film;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
 
@@ -19,8 +21,25 @@ public class App {
         Class.forName("org.postgresql.Driver");
         Connection conn = DriverManager.getConnection(urlConnection, username, password);
 
-
         System.out.println("Connessione stabilita! Schema: " + conn.getSchema());
 
+
+        // Uso il PreparedStatement
+        PreparedStatement ps_all_film = conn.prepareStatement("SELECT * FROM film");
+        ResultSet rs = ps_all_film.executeQuery();
+
+        List<Film> films = new ArrayList<>();
+        Film f;
+
+        while(rs.next()){
+            f = new Film(rs.getInt("id"), rs.getString("nome"), rs.getString("direttore"));
+            films.add(f);
+        }
+
+        System.out.println(films);
+
+        conn.close();
+        rs.close();
+        ps_all_film.close();
     }
 }
