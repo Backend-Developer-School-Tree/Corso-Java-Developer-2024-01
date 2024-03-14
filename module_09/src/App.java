@@ -25,21 +25,32 @@ public class App {
 
 
         // Uso il PreparedStatement
-        PreparedStatement ps_all_film = conn.prepareStatement("SELECT * FROM film");
+        PreparedStatement ps_all_film = conn.prepareStatement("SELECT * FROM film WHERE nome = ?");
+        ps_all_film.setString(1, "Ombre nel Buio");
         ResultSet rs = ps_all_film.executeQuery();
 
         List<Film> films = new ArrayList<>();
         Film f;
 
+        // VADO A LEGGERE I RECORDS
         while(rs.next()){
             f = new Film(rs.getInt("id"), rs.getString("nome"), rs.getString("direttore"));
             films.add(f);
         }
+        ps_all_film.close();
 
         System.out.println(films);
 
+        // VADO AD INSERIRE DATI IN TABELLA
+        PreparedStatement ps_insert_film = conn.prepareStatement("INSERT INTO film (Nome, Direttore) VALUES (?, ?)");
+        ps_insert_film.setString(1,"Nome JDBC"); //In posizione 1 ho il nome
+        ps_insert_film.setString(2,"Direttore JDBC"); //In posizione 2 ho il direttore
+
+        int row_affected = ps_insert_film.executeUpdate();
+        System.out.println("Inserimento completato " + row_affected );
+        ps_insert_film.close();
+
         conn.close();
         rs.close();
-        ps_all_film.close();
     }
 }
