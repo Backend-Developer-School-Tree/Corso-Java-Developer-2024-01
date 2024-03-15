@@ -9,7 +9,7 @@ Infine, ogni utente può lasciare una recensione di un film.
 
 Funzionalità:
 
-- Scrivere delle query (INSERT) per creare degli utenti e dei film all'interno del database
-- Scrivere una query (INSERT) per salvare una serie di film preferiti dato un utente
-- Scrivere una query (INSERT) per segnare che un dato utente ha guardato un dato film
-- Scrivere una query (INSERT) per lasciare una recensione per un dato film da parte di un dato utente
+- Scrivere delle query SQL per creare degli utenti e dei film all'interno del database (INSERT)
+- Scrivere una query SQL per salvare una serie di film preferiti dato un utente (INSERT)
+- Scrivere una query SQL per segnare che un dato utente ha guardato un dato film (INSERT)
+- Scrivere una query SQL per lasciare una recensione per un dato film da parte di un dato utente (INSERT)
