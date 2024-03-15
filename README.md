@@ -17,6 +17,7 @@ This repo collects all the exercises produced and gathered by [Andrea Gasparini]
 | 6      | Ereditarietà Avanzata        | [Esempi](module_06/src/esempi/), [Esercizi](module_06/src/esercizi/) |
 | 7      | Generics & Collections       | [Esempi](module_07/src/esempi/), [Esercizi](module_07/src/esercizi/) |
 | 8      | Eccezioni e annotazioni      | [Esempi](module_08/src/esempi/), [Esercizi](module_08/src/esercizi/) |
+| 9      | Database                     | [Esempi](module_09/src/esempi/), [Esercizi](module_09/src/esercizi/) |
 <!--
 | 9      | Gestione I/O - Packages      | [Esempio reader/writer](module_09/src/esempi/reader_writer/), [Esempio database](module_09/src/esempi/database), [Esercizi](module_09/src/esercizi/)                                                                                                                                                         |
 | 10     | Design Patterns              | [Esempi](module_10/src/esempi), [Esercizi](module_10/src/esercizi/) |
