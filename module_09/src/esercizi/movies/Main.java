@@ -1,4 +1,4 @@
-package module_09.src.esempi.esercizi.movies;
+package module_09.src.esercizi.movies;
 
 import java.sql.*;
 
