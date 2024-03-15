@@ -9,7 +9,14 @@ Infine, ogni utente può lasciare una recensione di un film.
 
 Funzionalità:
 
-- Scrivere delle query SQL per creare degli utenti e dei film all'interno del database (INSERT)
-- Scrivere una query SQL per salvare una serie di film preferiti dato un utente (INSERT)
-- Scrivere una query SQL per segnare che un dato utente ha guardato un dato film (INSERT)
-- Scrivere una query SQL per lasciare una recensione per un dato film da parte di un dato utente (INSERT)
+- Scrivere delle query SQL per creare degli utenti e dei film all'interno del database
+- Scrivere una query SQL per salvare una serie di film preferiti dato l'id di un utente (utilizzando gli id dei film e dell'utente)
+- Scrivere una query SQL per segnare che un utente ha guardato un film (utilizzando gli id del film e dell'utente)
+- Scrivere una query SQL per lasciare una recensione per un film da parte di un utente (utilizzando gli id del film e dell'utente)
+
+Funzionalità avanzate:
+
+- Elencare tutti i film di un determinato direttore.
+- Visualizzate tutti i film visti da un utente.
+- Visualizzare tutti i film che hanno avuto più di tre recensioni.
+- Visualizzare i primi 3 film più visti del 2023.
