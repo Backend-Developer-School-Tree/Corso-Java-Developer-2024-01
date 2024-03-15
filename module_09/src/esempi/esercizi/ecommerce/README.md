@@ -4,5 +4,5 @@ Ogni utente può effettuare la recensione di un prodotto. Ogni recensione ha un 
 
 PLUS:
 Scrivere la seguente query:
-- ottenere il prezzo medio dei prodotti
-- ottenere il numero di prodotti disponibili
+- ottenere il prezzo medio dei prodotti (AVG)
+- ottenere il numero di prodotti disponibili (COUNT)
