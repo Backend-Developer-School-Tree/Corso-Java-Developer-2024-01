@@ -1,3 +1,5 @@
+package module_09.src.esempi.jdbc_base;
+
 import model.Film;
 
 import java.sql.*;
