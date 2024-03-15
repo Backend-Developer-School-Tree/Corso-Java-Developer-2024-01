@@ -11,7 +11,7 @@ import java.sql.*;
  * 3) Visualizzare tutti i film che hanno avuto più di tre recensioni.
  * 4) Visualizzare i primi 3 film più visti del 2023.
  */
-public class Main {
+public class MainMySQL {
     public static void main(String[] args) {
         Connection conn = null;
         try {
