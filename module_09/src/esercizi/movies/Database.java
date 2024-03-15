@@ -170,16 +170,21 @@ public class Database
         props.setProperty("db_url", "localhost");
         props.setProperty("dbms", "postgresql");
 
-        Database db = new Database(props);
+        Database db = null;
 
-        db.insertUser("Andrea", "Gasparini", LocalDate.of(1998, 16, 11));
-        db.insertUser("Mario", "Mario", LocalDate.of(1981, 10, 11));
+        try {
+            db = new Database(props);
 
-        User user = new User("Andrea", "Gasparini", LocalDate.of(1998, 16, 11));
-        System.out.println(user.getId()); // --> null
-        db.insertUser(user);
-        System.out.println(user.getId()); // --> valore generato dal DB
+            db.insertUser("Andrea", "Gasparini", LocalDate.of(1998, 16, 11));
+            db.insertUser("Mario", "Mario", LocalDate.of(1981, 10, 11));
 
-        db.close();
+            User user = new User("Andrea", "Gasparini", LocalDate.of(1998, 16, 11));
+            System.out.println(user.getId()); // --> null
+            db.insertUser(user);
+            System.out.println(user.getId()); // --> valore generato dal DB
+        }
+        finally {
+            if (db != null) db.close();
+        }
     }
 }
