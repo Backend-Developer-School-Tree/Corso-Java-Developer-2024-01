@@ -2,8 +2,8 @@
 
 Realizzare una classe `Tripleton` che può avere fino a 3 istanze in memoria.
 
-Definire una politica di assegnazione delle istanze a piacere, ad esempio ad ogni chiamata del metodo `getIstance()`
-possiamo semplicemente ritornare una diversa istanza nell'ordine:
+Definire un ordine di assegnazione delle istanze a piacere, ad esempio ad ogni chiamata del metodo `getIstance()`
+possiamo semplicemente ritornare una diversa istanza nell'ordine "1, 2, 3":
 
 - 1° chiamata `getIstance()`: istanza 1
 - 2° chiamata `getIstance()`: istanza 2

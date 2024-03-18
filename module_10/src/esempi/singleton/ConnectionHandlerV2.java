@@ -27,7 +27,11 @@ public class ConnectionHandlerV2
     {
         // 3.1 verifichiamo se l'istanza già esiste (se non è null)
         // e in caso contrario la istanziamo
-        if (internalInstance == null) internalInstance = new ConnectionHandlerV2(props);
+        if (internalInstance == null)
+        {
+            if (props == null) throw new RuntimeException("The input properties should be not null to instantiate the ConnectionHandler class. Please call getInstance(Properties props) with a valid Properties object.");
+            internalInstance = new ConnectionHandlerV2(props);
+        }
 
         // 3.2 ritorniamo l'istanza già esistente
         return internalInstance;
