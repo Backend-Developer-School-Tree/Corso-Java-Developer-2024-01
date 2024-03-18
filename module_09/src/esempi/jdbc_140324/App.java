@@ -26,20 +26,21 @@ public class App {
         System.out.println("Connessione stabilita! Schema: " + conn.getSchema());
 
 
-        // Uso il PreparedStatement
+        // Uso il PreparedStatement. Se uso il * prendo tutte le colonne della tabella
         PreparedStatement ps_all_film = conn.prepareStatement("SELECT * FROM film WHERE nome = ?");
         ps_all_film.setString(1, "Ombre nel Buio");
-        ResultSet rs = ps_all_film.executeQuery();
+        ResultSet rs_all_films = ps_all_film.executeQuery(); //executeQuery per le DQL (SELECT ..)
 
         List<Film> films = new ArrayList<>();
         Film f;
 
-        // VADO A LEGGERE I RECORDS
-        while(rs.next()){
-            f = new Film(rs.getInt("id"), rs.getString("nome"), rs.getString("direttore"));
-            films.add(f);
-        }
+        // VADO A LEGGERE I RECORDS e creare un oggetto Film
+            while(rs_all_films.next()){
+                f = new Film(rs_all_films.getInt("id"), rs_all_films.getString("nome"), rs_all_films.getString("direttore"));
+                films.add(f);
+            }
         ps_all_film.close();
+        rs_all_films.close();
 
         System.out.println(films);
 
@@ -48,11 +49,13 @@ public class App {
         ps_insert_film.setString(1,"Nome JDBC"); //In posizione 1 ho il nome
         ps_insert_film.setString(2,"Direttore JDBC"); //In posizione 2 ho il direttore
 
+
+        // executeUpdate usato quando voglio eseguire una DML (Insert, Update, Delete)
         int row_affected = ps_insert_film.executeUpdate();
         System.out.println("Inserimento completato " + row_affected );
         ps_insert_film.close();
 
-        conn.close();
-        rs.close();
+        conn.close(); //Connessione va chiusa una sola volta
+
     }
 }
