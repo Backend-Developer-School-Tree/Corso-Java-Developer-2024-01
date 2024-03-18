@@ -41,4 +41,6 @@ public class ConnectionHandlerV2
     {
         return getInstance(null);
     }
+
+    public Connection getConnection() { return connection; }
 }
