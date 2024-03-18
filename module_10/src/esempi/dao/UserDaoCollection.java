@@ -1,4 +1,4 @@
-package esempi.simple_dao;
+package esempi.dao;
 
 import java.util.ArrayList;
 import java.util.List;

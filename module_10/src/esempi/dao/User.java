@@ -1,4 +1,4 @@
-package esempi.simple_dao;
+package esempi.dao;
 
 public class User
 {

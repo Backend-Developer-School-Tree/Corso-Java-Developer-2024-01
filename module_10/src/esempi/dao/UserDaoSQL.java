@@ -1,6 +1,5 @@
-package esempi.simple_dao;
+package esempi.dao;
 
-import java.sql.Connection;
 import java.util.List;
 
 public class UserDaoSQL implements UserDao

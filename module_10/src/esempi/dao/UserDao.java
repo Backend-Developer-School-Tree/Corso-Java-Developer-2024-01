@@ -1,8 +1,8 @@
-package esempi.simple_dao;
+package esempi.dao;
 
 import java.util.List;
 
-// interface ---extends----> interface
+// interface ----extends---> interface
 // class     --implements--> interface
 public interface UserDao
 {
