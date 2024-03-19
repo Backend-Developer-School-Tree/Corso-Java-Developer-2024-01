@@ -112,17 +112,17 @@ public class UserDaoCsv implements UserDao
         return null;
     }
 
-    public static void main(String[] args) throws IOException {
-        System.out.println(new UserDaoCsv(Paths.get("module_11", "src", "esempi", "file_dao", "resources", "users.csv")).userMap);
+    public static void main(String[] args) {
         // riga (stringa) --> Utente
         // Utente --> stringa (riga)
 
-        // POSSIBILE OPZIONE: CERCO GLI INDICI DI TUTTE LE VIRGOLE E FACCIO UN FOR
+        // OPZIONE PROPOSTA: CERCO GLI INDICI DI TUTTE LE VIRGOLE E FACCIO UN FOR
         // while (riga1.isPresent(","))
         //      attributo = substring(indiceVirgolaPrecedente, indexOf(","))
 
         // Utente utente = new Utente(???)
 
+        // SOLUZIONE OTTIMALE:
         // RECUPERARE GLI UTENTI DA FILE
         // riga (stringa) --> Utente
 
