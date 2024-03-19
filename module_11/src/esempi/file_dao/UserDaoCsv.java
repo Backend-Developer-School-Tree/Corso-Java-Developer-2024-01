@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.TreeMap;
@@ -111,9 +112,8 @@ public class UserDaoCsv implements UserDao
         return null;
     }
 
-    public static void main(String[] args)
-    {
-        new UserDaoCsv()
+    public static void main(String[] args) throws IOException {
+        System.out.println(new UserDaoCsv(Paths.get("module_11", "src", "esempi", "file_dao", "resources", "users.csv")).userMap);
         // riga (stringa) --> Utente
         // Utente --> stringa (riga)
 
@@ -126,13 +126,13 @@ public class UserDaoCsv implements UserDao
         // RECUPERARE GLI UTENTI DA FILE
         // riga (stringa) --> Utente
 
-        String riga1 = "0,Andrea,Gasparini,01-01-1990";
+        String riga1 = "0,Andrea,Gasparini,1990-01-01";
 
-        // riga1 --> ["0", "Andrea", "Gasparini", "01-01-1990"]
+        // riga1 --> ["0", "Andrea", "Gasparini", "1990-01-01"]
 
         String[] attributi = riga1.split(",");
 
-        // ["0", "Andrea", "Gasparini", "01-01-1990"] --> Utente
+        // ["0", "Andrea", "Gasparini", "1990-01-01"] --> Utente
 
         User user = new User(Integer.parseInt(attributi[0]), attributi[1], attributi[2], LocalDate.parse(attributi[3]));
 
@@ -143,7 +143,7 @@ public class UserDaoCsv implements UserDao
 
         String[] userAttributes = {String.valueOf(user.getId()), user.getName(), user.getLastName(), user.getBirthday().toString()};
 
-        // ["0", "Andrea", "Gasparini", "01-01-1990"] --> "0,Andrea,Gasparini,01-01-1990"
+        // ["0", "Andrea", "Gasparini", "1990-01-01"] --> "0,Andrea,Gasparini,1990-01-01"
 
         String userStr = String.join(",", userAttributes);
 

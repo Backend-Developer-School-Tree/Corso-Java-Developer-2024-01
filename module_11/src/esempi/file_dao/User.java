@@ -64,6 +64,16 @@ public class User
         this.birthday = birthday;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthday=" + birthday +
+                '}';
+    }
+
     public static class Builder
     {
         private int id;
