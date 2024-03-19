@@ -1,3 +1,5 @@
+package module_11.src.esempi.reader_writer;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -9,7 +11,7 @@ public class App {
         String fileName = "myFile.txt";
 
         // Modo alternativo di passare il percorso del file
-        //ReaderWriter rw = new ReaderWriter("module_11/src/");
+        //module_11.src.esempi.reader_writer.ReaderWriter rw = new module_11.src.esempi.reader_writer.ReaderWriter("module_11/src/");
 
         // Modo alternativo di esplicitare il percorso
         Path path = Paths.get("module_11", "src", fileName);
