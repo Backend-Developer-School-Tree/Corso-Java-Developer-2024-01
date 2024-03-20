@@ -8,7 +8,6 @@ import com.opinno.justdelivery.model.Order;
 import com.opinno.justdelivery.model.User;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.event.Level;
 
 import java.time.LocalDateTime;
 
@@ -30,7 +29,23 @@ public class App {
     }
 
     private static void initData(OrderDao oDao, UserDao uDao){
-        User u1 = User.builder().name("Name 1").email("email1@gmail.com").build();
+
+        // Voglio generare potenzialmente migliaia di record con poche linee di codice
+        User uTmp;
+        Order oTmp;
+
+        // TODO: implementare un metodo "getRandomUser" dentro la classe DaoUser per far tornare un utente a caso per poterlo inserire dentro l'ordine. HINT: Math.random();
+        for(int i=0; i<500; i++){
+            uTmp = User.builder().name("Name"+i).email("email"+i+"@gmail.com").build();
+            oTmp = Order.builder().id(Long.valueOf(i)).dateTimeOrder(LocalDateTime.now()).user(uTmp).build();
+
+            oTmp.setUser(uTmp);
+
+            uDao.saveUser(uTmp);
+            oDao.saveOrder(oTmp);
+        }
+
+        /*User u1 = User.builder().name("Name 1").email("email1@gmail.com").build();
         User u2 = User.builder().name("Name 2").email("email2@gmail.com").build();
         User u3 = User.builder().name("Name 3").email("email3@gmail.com").build();
 
@@ -57,6 +72,6 @@ public class App {
         oDao.saveOrder(o3);
         oDao.saveOrder(o4);
         oDao.saveOrder(o5);
-        oDao.saveOrder(o6);
+        oDao.saveOrder(o6);*/
     }
 }

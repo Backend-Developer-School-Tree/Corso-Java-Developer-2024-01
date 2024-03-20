@@ -34,6 +34,7 @@ public class OrderDaoCollections implements OrderDao {
         } else {
             for(Order o : orders.values()){
                 log.info(o.toString());
+                log.info("- - - - - - - - - - - - - - - "); // Nuova linea per separare i dati
             }
         }
     }
