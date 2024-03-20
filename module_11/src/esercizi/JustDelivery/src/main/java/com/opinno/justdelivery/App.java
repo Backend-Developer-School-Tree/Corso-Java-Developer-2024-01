@@ -23,7 +23,11 @@ public class App {
         OrderDao oDao = new OrderDaoCollections();
 
         initData(oDao, uDao);
+        log.info(" ************** ORDERS **************");
         oDao.printOrders();
+
+        log.info(" ************** USERS **************");
+        uDao.printUsers();
 
         log.info("SYSTEM SHUTDOWN :( ");
     }
@@ -35,7 +39,7 @@ public class App {
         Order oTmp;
 
         // TODO: implementare un metodo "getRandomUser" dentro la classe DaoUser per far tornare un utente a caso per poterlo inserire dentro l'ordine. HINT: Math.random();
-        for(int i=0; i<500; i++){
+        for(int i=0; i<5; i++){
             uTmp = User.builder().name("Name"+i).email("email"+i+"@gmail.com").build();
             oTmp = Order.builder().id(Long.valueOf(i)).dateTimeOrder(LocalDateTime.now()).user(uTmp).build();
 
