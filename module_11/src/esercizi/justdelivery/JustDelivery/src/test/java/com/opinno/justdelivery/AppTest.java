@@ -1,4 +1,4 @@
-package org.example;
+package com.opinno.justdelivery;
 
 import static org.junit.Assert.assertTrue;
 
