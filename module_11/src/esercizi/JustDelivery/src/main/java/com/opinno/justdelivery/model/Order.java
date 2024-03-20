@@ -16,4 +16,8 @@ public class Order {
     LocalDateTime dateTimeOrder;
     User user;
 
+    public String order2commas(){
+        return id + "," + dateTimeOrder.toString() + "," + user.getEmail();
+    }
+
 }

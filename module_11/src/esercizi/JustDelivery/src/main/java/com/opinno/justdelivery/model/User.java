@@ -19,6 +19,10 @@ public class User {
     String email;
     String name;
 
+    public String user2commas(){
+        return email + "," + name;
+    }
+
     /* Codice scritto a tempo statico da Lombok :)
 
     public Users(String email, String name) {

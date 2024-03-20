@@ -4,6 +4,7 @@ import com.opinno.justdelivery.dao.OrderDao;
 import com.opinno.justdelivery.dao.UserDao;
 import com.opinno.justdelivery.dao.impl.collections.OrderDaoCollections;
 import com.opinno.justdelivery.dao.impl.collections.UserDaoCollections;
+import com.opinno.justdelivery.dao.impl.files.OrderDaoCSV;
 import com.opinno.justdelivery.model.Order;
 import com.opinno.justdelivery.model.User;
 import lombok.extern.java.Log;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 
 @Slf4j
 @Log
+// TODO: formattare la LocalDateTime per evitare i millisecondi
 public class App {
 
     public static void main( String[] args ) {
@@ -28,6 +30,13 @@ public class App {
 
         log.info(" ************** USERS **************");
         uDao.printUsers();
+
+
+        OrderDao orderDaoCSV = new OrderDaoCSV();
+        User uTmp = User.builder().email("test@aaa.com").name("aaaaa").build();
+        orderDaoCSV.saveOrder(Order.builder().id(0L).dateTimeOrder(LocalDateTime.now()).user(uTmp).build());
+
+
 
         log.info("SYSTEM SHUTDOWN :( ");
     }
