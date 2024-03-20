@@ -32,23 +32,25 @@ public class App {
         uDao.printUsers();
 
 
+        //OrderDao orderDaoCSV = new OrderDaoCSV(); //nel costruttore creo il file!
+        //User uTmp = User.builder().email("test@aaa.com").name("aaaaa").build();
+        //orderDaoCSV.saveOrder(Order.builder().id(0L).dateTimeOrder(LocalDateTime.now()).user(uTmp).build());
+
         OrderDao orderDaoCSV = new OrderDaoCSV();
-        User uTmp = User.builder().email("test@aaa.com").name("aaaaa").build();
-        orderDaoCSV.saveOrder(Order.builder().id(0L).dateTimeOrder(LocalDateTime.now()).user(uTmp).build());
-
-
+        orderDaoCSV.printOrders();
 
         log.info("SYSTEM SHUTDOWN :( ");
     }
 
     private static void initData(OrderDao oDao, UserDao uDao){
+        OrderDao orderDaoCSV = new OrderDaoCSV();
 
         // Voglio generare potenzialmente migliaia di record con poche linee di codice
         User uTmp;
         Order oTmp;
 
         // TODO: implementare un metodo "getRandomUser" dentro la classe DaoUser per far tornare un utente a caso per poterlo inserire dentro l'ordine. HINT: Math.random();
-        for(int i=0; i<5; i++){
+        for(int i=0; i<5000; i++){
             uTmp = User.builder().name("Name"+i).email("email"+i+"@gmail.com").build();
             oTmp = Order.builder().id(Long.valueOf(i)).dateTimeOrder(LocalDateTime.now()).user(uTmp).build();
 
@@ -56,6 +58,8 @@ public class App {
 
             uDao.saveUser(uTmp);
             oDao.saveOrder(oTmp);
+
+            orderDaoCSV.saveOrder(oTmp);
         }
 
         /*User u1 = User.builder().name("Name 1").email("email1@gmail.com").build();
