@@ -18,9 +18,9 @@ This repo collects all the exercises produced and gathered by [Andrea Gasparini]
 | 7      | Generics & Collections       | [Esempi](module_07/src/esempi/), [Esercizi](module_07/src/esercizi/) |
 | 8      | Eccezioni e annotazioni      | [Esempi](module_08/src/esempi/), [Esercizi](module_08/src/esercizi/) |
 | 9      | Database                     | [Esempi](module_09/src/esempi/), [Esercizi](module_09/src/esercizi/) |
+| 10     | Design Patterns              | [Esempi](module_10/src/esempi/), [Esercizi](module_10/src/esercizi/) |
+| 11     | Gestione I/O - Packages - Maven - Lombok     | [Esempio reader/writer](module_11/src/esempi/reader_writer/), [Esercizi](module_09/src/esercizi/) |   
 <!--
-| 9      | Gestione I/O - Packages      | [Esempio reader/writer](module_09/src/esempi/reader_writer/), [Esempio database](module_09/src/esempi/database), [Esercizi](module_09/src/esercizi/)                                                                                                                                                         |
-| 10     | Design Patterns              | [Esempi](module_10/src/esempi), [Esercizi](module_10/src/esercizi/) |
 | 11     | Java Stream                  | [Esempi](module_11/src/esempi), [Esercizi](module_11/src/esercizi/)                                     |
 | 12     | Database                     | [Esempi](module_12/src/esempi)                           |
 | 13     | API                          | [Esercizi](module_13/src)                                                                  |
