@@ -19,7 +19,7 @@ public class OrderDaoCollections implements OrderDao {
 
     //Ricorda il getId lo abbiamo grazie a Lombok!
     @Override
-    public void saveOrder(Order u) {
+    public void saveOrder(Order o) {
         orders.put(u.getId(), u);
 
         log.info("ORDINE INSERITO: " + u);
