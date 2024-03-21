@@ -1,5 +1,7 @@
 package com.opinno.spark;
 
+import com.opinno.spark.controller.UserController;
+
 /**
  * Hello world!
  *
@@ -8,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-
-        System.out.println( "Hello World!" );
+        UserController userController = new UserController();
+        userController.startWebServices();
     }
 }
