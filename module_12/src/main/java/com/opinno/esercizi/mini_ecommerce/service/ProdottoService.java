@@ -1,7 +1,7 @@
-package com.opinno.mini_ecommerce.service;
+package com.opinno.esercizi.mini_ecommerce.service;
 
-import com.opinno.mini_ecommerce.dao.ProdottoDao;
-import com.opinno.mini_ecommerce.model.Prodotto;
+import com.opinno.esercizi.mini_ecommerce.dao.ProdottoDao;
+import com.opinno.esercizi.mini_ecommerce.model.Prodotto;
 
 import java.util.List;
 

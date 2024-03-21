@@ -1,6 +1,6 @@
-package com.opinno.spark;
+package com.opinno.esempi.spark;
 
-import com.opinno.spark.controller.UserController;
+import com.opinno.esempi.spark.controller.UserController;
 
 /**
  * Hello world!

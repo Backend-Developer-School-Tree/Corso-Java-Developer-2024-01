@@ -1,4 +1,4 @@
-package com.opinno.spark.controller.utility;
+package com.opinno.esempi.spark.controller.utility;
 
 import com.google.gson.JsonElement;
 import lombok.AllArgsConstructor;

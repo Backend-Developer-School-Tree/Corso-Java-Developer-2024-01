@@ -1,4 +1,4 @@
-package com.opinno.spark;
+package com.opinno.esempi.spark;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,6 +1,6 @@
-package com.opinno.spark.service;
+package com.opinno.esempi.spark.service;
 
-import com.opinno.spark.model.User;
+import com.opinno.esempi.spark.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

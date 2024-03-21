@@ -1,8 +1,8 @@
-package com.opinno.spark.controller;
+package com.opinno.esempi.spark.controller;
 
 import com.google.gson.Gson;
-import com.opinno.spark.controller.utility.HttpResponse;
-import com.opinno.spark.service.UserService;
+import com.opinno.esempi.spark.controller.utility.HttpResponse;
+import com.opinno.esempi.spark.service.UserService;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 

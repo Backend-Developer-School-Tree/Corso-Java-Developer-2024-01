@@ -1,9 +1,9 @@
-package com.opinno.mini_ecommerce.controller;
+package com.opinno.esercizi.mini_ecommerce.controller;
 
 import com.google.gson.Gson;
-import com.opinno.mini_ecommerce.model.Prodotto;
-import com.opinno.mini_ecommerce.service.ProdottoService;
-import com.opinno.spark.controller.utility.HttpResponse;
+import com.opinno.esercizi.mini_ecommerce.model.Prodotto;
+import com.opinno.esercizi.mini_ecommerce.service.ProdottoService;
+import com.opinno.esempi.spark.controller.utility.HttpResponse;
 
 import java.util.List;
 

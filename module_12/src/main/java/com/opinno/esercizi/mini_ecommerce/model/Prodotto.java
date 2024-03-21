@@ -1,4 +1,4 @@
-package com.opinno.mini_ecommerce.model;
+package com.opinno.esercizi.mini_ecommerce.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

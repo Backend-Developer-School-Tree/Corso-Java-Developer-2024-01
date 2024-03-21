@@ -1,4 +1,4 @@
-package com.opinno.spark.model;
+package com.opinno.esempi.spark.model;
 
 import lombok.Builder;
 import lombok.Data;
