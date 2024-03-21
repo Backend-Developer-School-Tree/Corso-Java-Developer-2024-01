@@ -13,8 +13,8 @@ public class UserService {
         users = new ArrayList<>();
 
         //Builder di Lombok
-        User u1 = User.builder().Id(1L).username("username12").build();
-        User u2 = User.builder().Id(2L).username("username21").build();
+        User u1 = User.builder().id(1L).username("username12").build();
+        User u2 = User.builder().id(2L).username("username21").build();
 
         users.add(u1);
         users.add(u2);
@@ -28,6 +28,6 @@ public class UserService {
     // Classe che va a cercare quello specifico user con quell'ID
     public User getUsersByID(Long id){
         // TODO: Ricerca all'interno della lista user che ha quell'ID
-        return User.builder().Id(1L).username("username12").build();
+        return User.builder().id(1L).username("username12").build();
     }
 }

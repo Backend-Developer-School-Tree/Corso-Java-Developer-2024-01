@@ -7,7 +7,7 @@ import lombok.Data;
 @Builder
 public class User {
 
-    Long Id;
+    Long id;
 
     String username;
 }
