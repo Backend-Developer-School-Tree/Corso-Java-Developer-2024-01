@@ -1,13 +1,8 @@
-package com.opinno.ecommerce.dao;
+package miniEcommerce.dao;
 
-import com.opinno.ecommerce.entity.Prodotto;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
+import miniEcommerce.entity.Prodotto;
 
 public class ProdottoDaoCollection implements ProdottoDao{
 	private Set<Prodotto> prodotti;
@@ -20,19 +15,19 @@ public class ProdottoDaoCollection implements ProdottoDao{
 	public Prodotto insert(Prodotto p) {
 		id++;
 		prodotti.add(p);
-		//imposto l'id perchï¿½ l'id viene generato dalla persistenza
+		//imposto l'id perché l'id viene generato dalla persistenza
 		p.setId(id);
 		return p;
 	}
-	public Prodotto update(Prodotto p) {
+	public Optional<Prodotto> update(Prodotto p) {
 		for(Prodotto pTmp : prodotti)
 			if(p.getId() == pTmp.getId()) {
 				setData(pTmp, p);
 				//restituisco l'oggetto aggiornato
-				return pTmp;
+				return Optional.of(pTmp);
 			}
 		//se non trovo l'oggetto restituisco null. Questo lo devo gestire nel service
-		return null;
+		return Optional.empty();
 	}
 	private void setData(Prodotto vecchio, Prodotto nuovo) {
 		vecchio.setDescrizione(nuovo.getDescrizione());
@@ -52,18 +47,28 @@ public class ProdottoDaoCollection implements ProdottoDao{
 		//non ho trovato l'id da cancellare
 		return false;
 	}
-	public Prodotto get(long id) {
+	public Optional<Prodotto> get(long id) {
 		for(Prodotto p: prodotti)
 			if(p.getId() == id)
-				return p;
-		return null;
+				return Optional.of(p);
+		return Optional.empty();
 	}
 	public List<Prodotto> getAll() {
 		List<Prodotto> lista = new ArrayList<Prodotto>();
-		for(Prodotto p : prodotti)
-			if(p.getQty() > 0)
+		for(Prodotto p : prodotti) {
+			//if(p.getQty() > 0)
+			//	lista.add(p);
+			if(prodottiDisponibili(p)){
 				lista.add(p);
+			}
+		}
 		return lista;
 	}
-	
+
+	private boolean prodottiDisponibili(Prodotto p){
+		return Optional.ofNullable(p)
+			.map(_p -> _p.getQty()) // estrapola la quantità per il prodotto
+			.filter(quantita -> quantita > 0)  // verifico se la quantità è maggiore di zero
+			.isPresent();
+	}
 }

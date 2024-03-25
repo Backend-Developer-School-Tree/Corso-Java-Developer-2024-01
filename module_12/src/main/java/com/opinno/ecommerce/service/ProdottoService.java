@@ -1,11 +1,10 @@
-package com.opinno.ecommerce.service;
-
-import com.opinno.ecommerce.dao.ProdottoDao;
-import com.opinno.ecommerce.entity.Prodotto;
+package miniEcommerce.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import miniEcommerce.dao.ProdottoDao;
+import miniEcommerce.entity.Prodotto;
 
 public class ProdottoService {
 	
@@ -24,17 +23,21 @@ public class ProdottoService {
 	
 	public void acquista(Prodotto p, int qty) throws RuntimeException {
 		if(qty <= 0)
-			throw new RuntimeException("La quantitï¿½ richiesta deve essere maggiore di 0");
-		Prodotto prodotto = prodottoDao.get(p.getId());
-		if(prodotto == null) 
-			throw new RuntimeException("prodotto non trovato");
+			throw new RuntimeException("La quantità richiesta deve essere maggiore di 0");
+		Prodotto prodotto = prodottoDao.get(p.getId()).orElseThrow( () -> new RuntimeException("prodotto non trovato") );
+		//if(prodotto == null)
+		//	throw new RuntimeException("prodotto non trovato");
 		if(prodotto.getQty() < qty)
-			throw new RuntimeException("La quantitï¿½ che si richiede ï¿½ maggiore di quella disponibile");
-		//aggiorno la quantitï¿½ e poi lo aggiorno
+			throw new RuntimeException("La quantità che si richiede è maggiore di quella disponibile");
+		//aggiorno la quantità e poi lo aggiorno
 		prodotto.setQty(prodotto.getQty() - qty);
-		//true se l'aggiornamento ï¿½ andato a buon fine
-		if(prodottoDao.update(prodotto) == null)
+		//true se l'aggiornamento è andato a buon fine
+
+		if(prodottoDao.update(prodotto).isEmpty()){
 			throw new RuntimeException("impossibile acquistare il prodotto");
+		}
+		//if(prodottoDao.update(prodotto) == null)
+		//	throw new RuntimeException("impossibile acquistare il prodotto");
 	}
 	public void elimina(long id) throws RuntimeException {
 		if(id <= 0)
@@ -45,9 +48,9 @@ public class ProdottoService {
 	public Prodotto get(long id) throws RuntimeException{
 		if(id <= 0)
 			throw new RuntimeException("id deve essere un numero maggiore di 0");
-		Prodotto p = prodottoDao.get(id);
-		if(p == null)
-			throw new RuntimeException("prodotto non trovato");
+		Prodotto p = prodottoDao.get(id).orElseThrow(()-> new RuntimeException("prodotto non trovato"));
+		//if(p == null)
+		//	throw new RuntimeException("prodotto non trovato");
 		return p;
 	}
 	public List<Prodotto> getProdottiDisponibili() {

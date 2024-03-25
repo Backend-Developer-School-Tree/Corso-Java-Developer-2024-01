@@ -1,6 +1,4 @@
-package com.opinno.ecommerce.dao;
-
-import com.opinno.ecommerce.entity.Prodotto;
+package miniEcommerce.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
+import miniEcommerce.entity.Prodotto;
 
 public class ProdottoDaoSql implements ProdottoDao {
 	private String connectionUrl = "jdbc:mysql://localhost:3306/miniecommerce";
@@ -26,16 +26,16 @@ public class ProdottoDaoSql implements ProdottoDao {
 			// Il secondo parametro serve per indicare che voglio restituito l'ID generato
 			// dal db
 			PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			// rende disponibile l'id generato dal db
 			// popolo i parametri
 			ps.setString(1, p.getNome());
 			ps.setString(2, p.getDescrizione());
 			ps.setInt(3, p.getQty());
 			ps.setDouble(4, p.getPrezzo());
-			// eseguo la query e verifico se ï¿½ stata eseguuta correttamente
+			// eseguo la query e verifico se è stata eseguuta correttamente
 			int row = ps.executeUpdate();
 			if (row == 0)
 				return null;
-
 			// mi faccio restituire l'ID generato e lo imposto come id del prodotto
 			ResultSet rs = ps.getGeneratedKeys();
 			if (rs.next()) {
@@ -52,13 +52,13 @@ public class ProdottoDaoSql implements ProdottoDao {
 				e.printStackTrace();
 			}
 		}
-		// ci vorrebbe il finally con la chiusura della connessione
 		return null;
 	}
 
 	@Override
-	public Prodotto update(Prodotto p) {
+	public Optional<Prodotto> update(Prodotto p) {
 		Connection conn = null;
+		Prodotto prodottoReturno = null;
 		try {
 			conn = DriverManager.getConnection(connectionUrl, username, password);
 			String sql = "UPDATE `prodotto` SET `nome`=?,`descrizione`=?,`qty`=?,`prezzo`=? WHERE id=?";
@@ -68,11 +68,10 @@ public class ProdottoDaoSql implements ProdottoDao {
 			ps.setInt(3, p.getQty());
 			ps.setDouble(4, p.getPrezzo());
 			ps.setLong(5, p.getId());
-			// eseguo la query e verifico se ï¿½ stata eseguuta correttamente
+			// eseguo la query e verifico se è stata eseguuta correttamente
 			int row = ps.executeUpdate();
-			if (row == 0)
-				return null;
-			return p;
+			if (row != 0)
+				prodottoReturno = p;
 		} catch (SQLException e) {
 			System.err.println("Error: " + e.getMessage());
 		} finally {// chiudo la connessione
@@ -83,7 +82,7 @@ public class ProdottoDaoSql implements ProdottoDao {
 				e.printStackTrace();
 			}
 		}
-		return null;
+		return Optional.ofNullable(prodottoReturno);
 	}
 
 	@Override
@@ -94,7 +93,7 @@ public class ProdottoDaoSql implements ProdottoDao {
 			String sql = "DELETE FROM `prodotto` WHERE id=?";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setLong(1, id);
-			// eseguo la query e verifico se ï¿½ stata eseguuta correttamente
+			// eseguo la query e verifico se è stata eseguuta correttamente
 			int row = ps.executeUpdate();
 			if (row == 0)
 				return false;
@@ -113,8 +112,9 @@ public class ProdottoDaoSql implements ProdottoDao {
 	}
 
 	@Override
-	public Prodotto get(long id) {
+	public Optional<Prodotto> get(long id) {
 		Connection conn = null;
+		Prodotto prodottoReturn = null;
 		try {
 			conn = DriverManager.getConnection(connectionUrl, username, password);
 			String sql = "SELECT * FROM prodotto WHERE id=?";
@@ -126,10 +126,8 @@ public class ProdottoDaoSql implements ProdottoDao {
 				return null;
 			Prodotto p = creaProdottoDaResultSet(rs);
 
-			// chiudo la connessione
-			conn.close();
 			// restituisco l'oggetto trovato
-			return p;
+			prodottoReturn = p;
 		} catch (SQLException e) {
 			System.err.println("Error: " + e.getMessage());
 		} finally {
@@ -140,9 +138,7 @@ public class ProdottoDaoSql implements ProdottoDao {
 				e.printStackTrace();
 			}
 		}
-
-		return null;
-
+		return Optional.ofNullable(prodottoReturn);
 	}
 
 	/**
