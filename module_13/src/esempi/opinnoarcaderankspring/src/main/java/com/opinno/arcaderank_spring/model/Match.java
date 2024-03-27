@@ -6,18 +6,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /*
-* Questa classe rappresenta la singola partita giocata dall'utente per lo specifico videogioco
+* Questa classe rappresenta la singola partita giocata dall'utente
+* per lo specifico videogioco
 * */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Game {
+public class Match {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Game {
     private LocalDateTime dateTimeGame;
 
     @OneToOne
-    private UserRank userRank;
+    private Player userRank;
 
     @OneToOne
     private Videogame videogame;

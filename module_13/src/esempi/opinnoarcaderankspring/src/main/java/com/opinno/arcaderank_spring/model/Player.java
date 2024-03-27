@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class UserRank {
+public class Player {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
