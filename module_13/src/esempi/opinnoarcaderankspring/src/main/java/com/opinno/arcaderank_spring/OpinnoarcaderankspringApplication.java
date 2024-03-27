@@ -9,7 +9,6 @@ public class OpinnoarcaderankspringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OpinnoarcaderankspringApplication.class, args);
 
-		System.out.println("Hello world!");
 	}
 
 }

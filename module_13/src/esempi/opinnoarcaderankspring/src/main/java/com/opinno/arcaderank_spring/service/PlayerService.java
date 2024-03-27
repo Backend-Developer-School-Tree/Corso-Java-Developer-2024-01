@@ -28,6 +28,12 @@ public class PlayerService {
     public Optional<Player> findById(Long playerID){ return playerRepository.findById(playerID); }
 
     public Player save(Player player){
+
         return playerRepository.save(player);
+    }
+
+    public void saveAll(List<Player> players){
+
+        playerRepository.saveAll(players);
     }
 }
