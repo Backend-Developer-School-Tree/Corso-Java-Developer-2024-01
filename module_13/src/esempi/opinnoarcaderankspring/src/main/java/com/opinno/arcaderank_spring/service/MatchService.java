@@ -25,4 +25,9 @@ public class MatchService {
     public Match save(Match match){
         return matchRepository.save(match);
     }
+
+    public List<Match> saveAll(List<Match> matches){
+        return matchRepository.saveAll(matches);
+    }
+
 }

@@ -20,9 +20,14 @@ public class VideogameService {
         return videogameRepository.findAll();
     }
 
-    public Optional<Videogame> findById(Long videoGameID){ return videogameRepository.findById(videoGameID); }
+    public Optional<Videogame> findById(Long videogameID){ return videogameRepository.findById(videogameID); }
 
-    public Videogame save(Videogame player){
-        return videogameRepository.save(player);
+    public Videogame save(Videogame videogame){
+        return videogameRepository.save(videogame);
     }
+
+    public List<Videogame> saveAll(List<Videogame> videogames){
+        return videogameRepository.saveAll(videogames);
+    }
+
 }

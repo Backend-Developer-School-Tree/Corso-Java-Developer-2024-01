@@ -18,15 +18,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 public class Match {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private LocalDateTime dateTimeGame;
-
     @OneToOne
-    private Player userRank;
+    private Player player;
 
     @OneToOne
     private Videogame videogame;
