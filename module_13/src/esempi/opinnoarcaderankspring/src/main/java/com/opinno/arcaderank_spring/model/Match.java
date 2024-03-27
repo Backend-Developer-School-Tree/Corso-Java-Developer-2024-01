@@ -22,6 +22,7 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDateTime dateTimeGame;
+
     @OneToOne
     private Player player;
 

@@ -3,6 +3,7 @@ package com.opinno.arcaderank_spring.utility;
 import com.opinno.arcaderank_spring.model.Match;
 import com.opinno.arcaderank_spring.model.Player;
 import com.opinno.arcaderank_spring.model.Videogame;
+import com.opinno.arcaderank_spring.service.BoardService;
 import com.opinno.arcaderank_spring.service.MatchService;
 import com.opinno.arcaderank_spring.service.PlayerService;
 import com.opinno.arcaderank_spring.service.VideogameService;
@@ -26,6 +27,9 @@ public class DataLoader implements CommandLineRunner {
     @Autowired
     private PlayerService playerService;
 
+    @Autowired
+    private BoardService boardService;
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -36,7 +40,9 @@ public class DataLoader implements CommandLineRunner {
         videogameService.saveAll(createVideoGameList());
 
         // 3) Inserisco i match
-        matchService.saveAll(createMatchesList());
+        //matchService.saveAll(createMatchesList());
+
+        System.out.println(boardService.getLeaderboardByVideogameId(1L));
 
     }
 
@@ -67,19 +73,18 @@ public class DataLoader implements CommandLineRunner {
 
     private List<Match> createMatchesList(){
         List<Match> matches = new ArrayList<>();
+        List<Player> players = new ArrayList<>();
+        List<Videogame> videogames = new ArrayList<>();
 
-        Player p_temp = Player.builder().username("Username test").build();
-        Videogame vg_tmp = Videogame.builder().name("Videogame test").difficultyCoeff(1).build();
+        players = playerService.getAll();
+        videogames = videogameService.getAll();
 
-        playerService.save(p_temp);
-        videogameService.save(vg_tmp);
-
-        Match m1 = Match.builder()
-                    .player(p_temp)
-                    .videogame(vg_tmp)
-                    .dateTimeGame(LocalDateTime.now()).build();
-
-        matches.add(m1);
+        for(int i=0; i<20; i++){
+            matches.add(Match.builder()
+                    .player(players.get(i))
+                    .videogame(videogames.get((int) (Math.random() * videogames.size()-1)))
+                    .dateTimeGame(LocalDateTime.now()).build());
+        }
 
         return matches;
 

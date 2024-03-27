@@ -1,6 +1,7 @@
 package com.opinno.arcaderank_spring.service;
 
 import com.opinno.arcaderank_spring.model.Match;
+import com.opinno.arcaderank_spring.model.Videogame;
 import com.opinno.arcaderank_spring.repository.MatchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,4 +31,7 @@ public class MatchService {
         return matchRepository.saveAll(matches);
     }
 
+    public List<Match> findAllByVideogame(Videogame videogame){
+        return matchRepository.findAllByVideogame(videogame);
+    }
 }
