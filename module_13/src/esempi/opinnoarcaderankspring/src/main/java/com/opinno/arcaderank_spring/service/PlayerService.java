@@ -36,4 +36,9 @@ public class PlayerService {
 
         playerRepository.saveAll(players);
     }
+
+    public void deleteByID(long pID){
+
+        playerRepository.deleteById(pID);
+    }
 }
