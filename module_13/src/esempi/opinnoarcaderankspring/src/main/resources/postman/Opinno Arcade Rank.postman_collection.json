@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "cb735b6e-059c-476b-9a47-808dc18c589f",
+		"name": "Opinno Arcade Rank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14801810",
+		"_collection_link": "https://www.postman.com/lunar-rocket-95745/workspace/projects/collection/14801810-cb735b6e-059c-476b-9a47-808dc18c589f?action=share&source=collection_link&creator=14801810"
+	},
+	"item": [
+		{
+			"name": "get all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get player by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/playerbyid?playerID=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"playerbyid"
+					],
+					"query": [
+						{
+							"key": "playerID",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete player",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/player/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"player",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\":\"0042\", \n    \"email\": \"testpostman@dummyemail.com\",\n    \"id\":\"42\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
